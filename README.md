@@ -58,8 +58,8 @@ Las consultas SELECT son esenciales para extraer información específica de una
 Aprenderás a realizar consultas SELECT en una sola tabla utilizando instrucciones como FROM, WHERE, IN, LIMIT, OFFSET, ORDER, AVERAGE, GROUP BY y COUNT.
 
 ### Recursos
-- [PostgreSQL Sample Database - DVD Rental](https://www.postgresqltutorial.com/postgresql-sample-database/): Aquí se puede ver el diagrama ER de una base de datos de ejemplo de renta de peliculas en DVD. Así mismo se puede descargar la base de datos de ejemplo.
-- [Cargar Base de Datos de Ejemplo en PostgreSQL](https://www.postgresqltutorial.com/load-postgresql-sample-database/): Se explica como restaurar un respaldo de base de datos (en este caso DVD Rental), tanto desde la consola como usando PGAdmin.
+- [PostgreSQL Sample Database - DVD Rental](https://neon.tech/postgresql/postgresql-getting-started/postgresql-sample-database): Aquí se puede ver el diagrama ER de una base de datos de ejemplo de renta de peliculas en DVD. Así mismo se puede descargar la base de datos de ejemplo.
+- [Cargar Base de Datos de Ejemplo en PostgreSQL](https://neon.tech/postgresql/postgresql-getting-started/load-postgresql-sample-database): Se explica como restaurar un respaldo de base de datos (en este caso DVD Rental), tanto desde la consola como usando PGAdmin.
 
 > [!WARNING]
 > Si al cargar el respaldo, te marca un error acerca de que no encuentra el "Binary Path", tienes que establecerlo en **"Preferences -> Paths -> Binary Path"**, ir a la parte de abajo en el apartado **"PostgreSQL Binary Path"** y en donde dice la versión que tienes instalada (supongamos la 16), colocar la ruta correcta del binario, por defecto son:
