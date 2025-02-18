@@ -10,7 +10,7 @@ app.use(express.json())
 
 // #3 Definir rutas
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello DevF G36!!!')
 })
 
 // #4 Levantar el servidor
