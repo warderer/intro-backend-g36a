@@ -15,5 +15,6 @@ const homeController = require('../controllers/homeController')
 // #4 Definir las rutas de la aplicación
 router.post('/homes', homeController.createHome)
 router.get('/homes', homeController.findAllHomes)
+router.get('/homes/:idHome', homeController.findOneHome)
 
 module.exports = router
