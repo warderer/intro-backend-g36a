@@ -33,8 +33,17 @@ const findOne = (houseId) => {
     .where('active', true)
 }
 
+const update = (houseId, bodyToUpdate) => {
+  return knex
+    .update(bodyToUpdate) // ¿Qué campos quiero actualizar?
+    .from('homes') // ¿De qué tabla?
+    .where('house_id', houseId) // ¿Cuál es el id del registro que quiero actualizar?
+    .returning('*') // ¿Qué campos quiero que me devuelva?
+}
+
 module.exports = {
   create,
   findAll,
-  findOne
+  findOne,
+  update
 }
