@@ -41,9 +41,27 @@ const update = (houseId, bodyToUpdate) => {
     .returning('*') // ¿Qué campos quiero que me devuelva?
 }
 
+// Soft delete: Este no borra un registro de la base de datos, sino que cambia el valor de active a false.
+const softDelete = (houseId) => {
+  return knex
+    .update({ active: false })
+    .from('homes')
+    .where('house_id', houseId)
+}
+
+// Hard delete (destroy): Este borra un registro de la base de datos.
+const destroy = (houseId) => {
+  return knex
+    .delete()
+    .from('homes')
+    .where('house_id', houseId)
+}
+
 module.exports = {
   create,
   findAll,
   findOne,
-  update
+  update,
+  softDelete,
+  destroy
 }

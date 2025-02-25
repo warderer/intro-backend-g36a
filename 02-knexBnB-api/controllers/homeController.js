@@ -44,10 +44,27 @@ const updateOneHome = (req, res) => {
 }
 
 // DELETE
+const softDeleteOneHome = (req, res) => {
+  ModelHome.softDelete(req.params.idHome).then(home => {
+    res.status(204).json()
+  }).catch(error => {
+    res.status(400).json({ message: error.message })
+  })
+}
+
+const destroyOneHome = (req, res) => {
+  ModelHome.destroy(req.params.idHome).then(home => {
+    res.status(204).json()
+  }).catch(error => {
+    res.status(400).json({ message: error.message })
+  })
+}
 
 module.exports = {
   createHome,
   findAllHomes,
   findOneHome,
-  updateOneHome
+  updateOneHome,
+  softDeleteOneHome,
+  destroyOneHome
 }
